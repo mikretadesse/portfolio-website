@@ -228,13 +228,13 @@ a:hover {
 }
 
 .cd-headline {
-  font-size: 3rem;
+  font-size: 2.2rem;
   line-height: 1.2;
 }
 
 @media only screen and (min-width: 768px) {
   .cd-headline {
-    font-size: 4.4rem;
+    font-size: 3.8rem;
     font-weight: 300;
   }
 }
@@ -243,6 +243,20 @@ a:hover {
     font-size: 6rem;
   }
 }
+
+.cd-headline {
+  font-size: clamp(2.2rem, 5vw, 6rem);
+  line-height: 1.2;
+}
+
+.cd-headline .blc {
+  font-size: clamp(2.2rem, 5vw, 6rem);
+}
+
+.cd-words-wrapper b {
+  font-size: clamp(2.2rem, 5vw, 6rem);
+}
+
 .cd-words-wrapper {
   display: inline-block;
   position: relative;
@@ -272,7 +286,7 @@ a:hover {
 /* xclip */
 .cd-headline.clip span {
   display: inline-block;
-  padding: 0.2em 0;
+  /* padding: 0.2em 0; */
 }
 
 .cd-headline.clip .cd-words-wrapper {
@@ -451,7 +465,9 @@ a:hover {
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  transition:
+    transform 0.5s,
+    -webkit-transform 0.5s;
   -webkit-transform: translateY(100px);
   transform: translateY(100px);
 }
@@ -491,6 +507,7 @@ a:hover {
 }
 .header .caption h2 {
   font-weight: 200;
+  margin-bottom: 1.8rem;
 }
 .header .caption h1 {
   margin: 10px 0;
